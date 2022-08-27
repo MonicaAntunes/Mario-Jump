@@ -1,5 +1,6 @@
 const mario = document.querySelector('.mario')
 const pipe = document.querySelector('.pipe')
+const floor = document.querySelector('.floor')
 /*querySelector(".mario") para selecionar como esta no CSS*/
 
 const jump = () => {
@@ -18,6 +19,8 @@ const loop = setInterval(() => {
   if (pipePosition < 140 && pipePosition > 0 && marioPosition < 80) {
     pipe.style.animation = 'none'
     pipe.style.left = `${pipePosition}px`
+
+    clearInterval(loop)
 
     mario.style.animation = 'none'
     mario.style.bottom = `${marioPosition}px`

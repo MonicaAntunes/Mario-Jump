@@ -16,6 +16,8 @@
 .floor {
   position: absolute;
   bottom: -10;
+  animation: floor-animation 3.5s infinite linear;
+
 }
 
 .pipe {
@@ -42,6 +44,17 @@
 }
 /*todas imagens position absolute para não mudar as outras imagens de posição*/
 
+@keyframes floor-animation {
+  from {
+    right: -80px;
+  }
+
+  to {
+    right: 100%;
+  }
+
+}
+
 @keyframes clouds-animation {
   from {
     right: -300px;
@@ -54,7 +67,7 @@
 
 @keyframes pipe-animation {
   from {
-  right: -80%;;
+  right: -70%;;
   }
   to {
   right: 100%;
